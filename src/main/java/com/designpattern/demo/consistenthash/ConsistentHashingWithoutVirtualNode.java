@@ -72,7 +72,7 @@ public class ConsistentHashingWithoutVirtualNode {
             //返回对应的服务器
             virtualNode = virtualNodes.get(i);
         }else{
-            //第一个Key就是顺时针过去离node最近的那个结点
+            //第一个Key就是顺时针过去离node最近的那个节点
             Integer i = subMap.firstKey();
             //返回对应的服务器
             virtualNode = subMap.get(i);
