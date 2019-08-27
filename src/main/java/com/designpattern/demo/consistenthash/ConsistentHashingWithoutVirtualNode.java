@@ -79,6 +79,8 @@ public class ConsistentHashingWithoutVirtualNode {
         }
         //virtualNode虚拟节点名称要截取一下
         if(StringUtils.isNotBlank(virtualNode)){
+            //如果取到是虚拟节点的,那么就将虚拟节点截取到真实节点【我这里使用了一种简单的办法，给每个真实结点后面根据虚拟节点加上后缀再取Hash值，
+            // 比如"192.168.0.0:111"就把它变成"192.168.0.0:111&&VN0"到"192.168.0.0:111&&VN4"，VN就是Virtual Node的缩写，还原的时候只需要从头截取字符串到"&&"的位置就可以了】
             return virtualNode.substring(0, virtualNode.indexOf("&&"));
         }
         return null;
