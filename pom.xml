@@ -51,11 +51,31 @@
 		</plugins>
 	</build>
 
+	<!--<distributionManagement>-->
+		<!--<repository>-->
+			<!--<id>releases</id>-->
+			<!--<name>demo</name>-->
+			<!--<url>http://192.168.100.130:8081/repository/ttt/</url>-->
+		<!--</repository>-->
+        <!--&lt;!&ndash;<snapshotRepository>&ndash;&gt;-->
+            <!--&lt;!&ndash;<id>snapshots</id>&ndash;&gt;-->
+            <!--&lt;!&ndash;<name>Nexus Snapshot Repository</name>&ndash;&gt;-->
+            <!--&lt;!&ndash;<url>http://test:8081/nexus/content/repositories/snapshots/</url>&ndash;&gt;-->
+        <!--&lt;!&ndash;</snapshotRepository>&ndash;&gt;-->
+	<!--</distributionManagement>-->
+
 	<distributionManagement>
 		<repository>
-			<id>bgnexus</id>
+			<id>releases</id>
+			<name>Nexus Release Repository</name>
 			<url>http://192.168.100.130:8081/repository/maven-releases/</url>
 		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Nexus Snapshot Repository</name>
+			<url>http://192.168.100.130:8081/repository/maven-releases/</url>
+		</snapshotRepository>
 	</distributionManagement>
+
 
 </project>
