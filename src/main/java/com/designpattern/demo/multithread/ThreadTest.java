@@ -24,16 +24,21 @@ public class ThreadTest {
 //                TimeUnit.SECONDS,
 //                new LinkedBlockingQueue<>(10),
 //                Executors.defaultThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
-        Lock lock = new ReentrantLock();
-        lock.lock();
-        int t =0;
-        lock.lock();
-        int t22 =0;
-        lock.unlock();
-        int xxx=3;
-        lock.unlock();
-        AtomicInteger atomicInteger = new AtomicInteger(0);
-        atomicInteger.getAndIncrement();
+//        Lock lock = new ReentrantLock();
+//        lock.lock();
+//        int t =0;
+//        lock.lock();
+//        int t22 =0;
+//        lock.unlock();
+//        int xxx=3;
+//        lock.unlock();
+//        AtomicInteger atomicInteger = new AtomicInteger(0);
+//        atomicInteger.getAndIncrement();
+       //多线程的实现:1.继承Thread类 2.实现Runable接口
+        Thread thread = new Thread(()->{
+            System.out.println("sfs");
+        });
+        thread.start();
 //        BloomFilter<String> bloomFilter = new  byte[];
 //        bloomFilter.mightContain("3");
 //        bloomFilter.put()
