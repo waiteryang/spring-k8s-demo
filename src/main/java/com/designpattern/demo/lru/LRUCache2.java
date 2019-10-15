@@ -2,6 +2,7 @@ package com.designpattern.demo.lru;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class LRUCache2<K, V> extends LinkedHashMap<K, V> {
     private final int MAX_CACHE_SIZE;
@@ -18,6 +19,8 @@ public class LRUCache2<K, V> extends LinkedHashMap<K, V> {
 
     @Override
     public String toString() {
+
+        AtomicInteger integer = new AtomicInteger();
         StringBuilder sb = new StringBuilder();
         for (Map.Entry<K, V> entry : entrySet()) {
             sb.append(String.format("%s:%s ", entry.getKey(), entry.getValue()));

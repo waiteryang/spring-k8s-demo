@@ -1,5 +1,12 @@
 package com.designpattern.demo.lru;
 
+import com.designpattern.demo.proxy.ISubject;
+import com.designpattern.demo.proxy.Subject;
+import com.designpattern.demo.proxy.SubjectProxyHandler;
+import javafx.scene.media.SubtitleTrack;
+
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Proxy;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -15,7 +22,6 @@ public class LRULinkedMap<K,V> extends LinkedHashMap<K,V> {
             return size() > cacheSize;
         }
     };
-}
 
 //    //LinkedHashMap的一个构造函数，当参数accessOrder为true时，即会按照访问顺序排序，最近访问的放在最前，最早访问的放在后面
 //    public LinkedHashMap(int initialCapacity, float loadFactor, boolean accessOrder) {
@@ -28,3 +34,14 @@ public class LRULinkedMap<K,V> extends LinkedHashMap<K,V> {
 //    protected boolean removeEldestEntry(Map.Entry<K,V> eldest) {
 //        return false;
 //    }
+    public static void main(String[] args) {
+        LRUCache2<String, Object> lruCache2 = new LRUCache2<>(2);
+        lruCache2.put("2", 234);
+        lruCache2.put("22", 2342);
+        lruCache2.put("21", 2341);
+        lruCache2.get("21");
+        lruCache2.put("2", 234);
+        lruCache2.get("2");
+        System.out.println(lruCache2);
+    }
+}
