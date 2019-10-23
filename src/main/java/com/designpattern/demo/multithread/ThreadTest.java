@@ -35,10 +35,17 @@ public class ThreadTest {
 //        AtomicInteger atomicInteger = new AtomicInteger(0);
 //        atomicInteger.getAndIncrement();
        //多线程的实现:1.继承Thread类 2.实现Runable接口
-        Thread thread = new Thread(()->{
-            System.out.println("sfs");
-        });
-        thread.start();
+//        Thread thread = new Thread(()->{
+//            System.out.println("sfs");
+//        });
+//        thread.start();
+
+
+//        Thread myThread = new Thread(()->{
+//            System.out.println("xxx");
+//        });
+//        myThread.start();
+
 //        BloomFilter<String> bloomFilter = new  byte[];
 //        bloomFilter.mightContain("3");
 //        bloomFilter.put()

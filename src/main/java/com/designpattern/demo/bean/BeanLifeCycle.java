@@ -33,25 +33,26 @@ public class BeanLifeCycle {
                 = new AnnotationConfigApplicationContext(Person.class);
 //        AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(MyBeanPostProcessor.class);
 
+        annotationConfigApplicationContext.getBeanFactory().registerSingleton("xx","sfs");
+
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
 
         annotationConfigApplicationContext.addBeanFactoryPostProcessor(new MyBeanFactoryPostProcessor());
 
 //        beanFactory.addBeanPostProcessor(new MyBeanFactoryPostProcessor());
-        beanFactory.addBeanPostProcessor(new MyBeanPostProcessor());
-        System.out.println("容器初始化成功");
-        //得到Preson，并使用
-        Person person = annotationConfigApplicationContext.getBean("person",Person.class);
-        System.out.println("获取得到bean对象:"+person);
-        System.out.println("现在开始关闭容器！");
-        //确保正常关闭,并且调用相关的destroy方法
-        annotationConfigApplicationContext.registerShutdownHook();
+//        beanFactory.addBeanPostProcessor(new MyBeanPostProcessor());
+//        System.out.println("容器初始化成功");
+//        //得到Preson，并使用
+//        Person person = annotationConfigApplicationContext.getBean("person",Person.class);
+//        System.out.println("获取得到bean对象:"+person);
+//        System.out.println("现在开始关闭容器！");
+//        //确保正常关闭,并且调用相关的destroy方法
+//        annotationConfigApplicationContext.registerShutdownHook();
 
 
-        BlockingQueue blockingQueue = new ArrayBlockingQueue(12);
-        ExecutorService executorService = new ThreadPoolExecutor(1,31,33, TimeUnit.MINUTES,blockingQueue,
-                                               Executors.defaultThreadFactory());
-
+//        BlockingQueue blockingQueue = new ArrayBlockingQueue(12);
+//        ExecutorService executorService = new ThreadPoolExecutor(1,31,33, TimeUnit.MINUTES,blockingQueue,
+//                                               Executors.defaultThreadFactory());
 
 
 

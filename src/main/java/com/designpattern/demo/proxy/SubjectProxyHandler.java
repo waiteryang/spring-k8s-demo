@@ -16,6 +16,11 @@ public class SubjectProxyHandler implements InvocationHandler {
         }
     }
 
+    /**
+     * @param proxy  代理对象
+     * @param method 调用方法
+     * @param args 方法中的参数
+     */
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         preAction();
