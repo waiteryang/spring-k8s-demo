@@ -11,6 +11,7 @@ public class HelloFactoryBean implements FactoryBean<Person> {
     public Person getObject() throws Exception {
         Person person = new Person();
         person.setBeanName("sdfd");
+        person.setName("你想干啥啊啊");
         return person;
 //        return null;
     }
