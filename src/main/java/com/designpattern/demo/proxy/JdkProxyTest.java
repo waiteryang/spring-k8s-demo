@@ -9,11 +9,8 @@ public class JdkProxyTest {
         ISubject subject =  new Subject();
         InvocationHandler handler = new SubjectProxyHandler(subject.getClass());
 //        newProxyInstance，方法有三个参数：
-//
 //        loader: 用哪个类加载器去加载代理对象
-//
 //        interfaces:动态代理类需要实现的接口
-//
 //        h:动态代理方法在执行时，会调用h里面的invoke方法去执行
         ISubject proxy =
                 (ISubject) Proxy.newProxyInstance(subject.getClass().getClassLoader(),
