@@ -22,15 +22,16 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+import org.apache.commons.collections4.CollectionUtils;
 
 public class BeanLifeCycle {
 
 
     public static void main(String[] args) {
 
-        System.out.println("现在开始初始化容器");
-        AnnotationConfigApplicationContext annotationConfigApplicationContext
-                = new AnnotationConfigApplicationContext(Person.class);
+//        System.out.println("现在开始初始化容器");
+//        AnnotationConfigApplicationContext annotationConfigApplicationContext
+//                = new AnnotationConfigApplicationContext(Person.class);
 //        AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(MyBeanPostProcessor.class);
 
 //        annotationConfigApplicationContext.getBeanFactory().registerSingleton("xx","sfs");
@@ -44,9 +45,9 @@ public class BeanLifeCycle {
 //        System.out.println("容器初始化成功");
 //        //得到Preson，并使用
 //        Person person = annotationConfigApplicationContext.getBean("person",Person.class);
-        Person person = annotationConfigApplicationContext.getBean(Person.class);
-         annotationConfigApplicationContext.getBean("&helloFactoryBean");
-        System.out.println("获取得到bean对象:"+person);
+//        Person person = annotationConfigApplicationContext.getBean(Person.class);
+//        annotationConfigApplicationContext.getBean("&helloFactoryBean");
+//        System.out.println("获取得到bean对象:"+person);
 //        System.out.println("现在开始关闭容器！");
 //        //确保正常关闭,并且调用相关的destroy方法
 //        annotationConfigApplicationContext.registerShutdownHook();
@@ -54,5 +55,14 @@ public class BeanLifeCycle {
 //        ExecutorService executorService = new ThreadPoolExecutor(1,31,33, TimeUnit.MINUTES,blockingQueue,
 //                                               Executors.defaultThreadFactory());
 //        Lock lock = new ReentrantLock();
+
+//        Integer i = 343434;
+//        Integer j = 343434;
+//        System.out.println(i.equals(j));
+//        Integer integer = null;
+//        int x = integer;
+
+        System.out.println(CollectionUtils.isEmpty(new ArrayList<>()));
+
     }
 }
