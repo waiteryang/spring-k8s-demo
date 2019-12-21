@@ -7,7 +7,7 @@ public class SimpleFactory1 {
 
 
     public static Car newCar() throws Exception{
-        InputStream inStream = DriveTest2.class.getClassLoader().getResourceAsStream("application.properties");
+        InputStream inStream = DriveTest2.class.getClassLoader().getResourceAsStream("application.yml");
         Properties prop = new Properties();
         prop.load(inStream);
         String name = prop.getProperty("drive2");

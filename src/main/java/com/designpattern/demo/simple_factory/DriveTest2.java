@@ -1,15 +1,13 @@
 package com.designpattern.demo.simple_factory;
 
 
-import org.springframework.beans.factory.annotation.Value;
-
 import java.io.InputStream;
 import java.util.Properties;
 
 public class DriveTest2 {
 
     public static void main(String[] args) throws Exception {
-        InputStream inStream = DriveTest2.class.getClassLoader().getResourceAsStream("application.properties");
+        InputStream inStream = DriveTest2.class.getClassLoader().getResourceAsStream("application.yml");
         Properties prop = new Properties();
         prop.load(inStream);
         String name = prop.getProperty("drive2");
