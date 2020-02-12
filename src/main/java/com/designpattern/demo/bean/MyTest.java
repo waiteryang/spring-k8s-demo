@@ -19,17 +19,19 @@ public class MyTest {
 
     public static void main(String[] args) {
 //        String configLocation = "application-factory-bean.xml";
-       ApplicationContext applicationContext = new AnnotationConfigApplicationContext(HelloFactoryBean.class);
-        HelloFactoryBean helloFactoryBean = applicationContext.getBean(HelloFactoryBean.class);
+      // ApplicationContext applicationContext = new AnnotationConfigApplicationContext(HelloFactoryBean.class);
+       // HelloFactoryBean helloFactoryBean = applicationContext.getBean(HelloFactoryBean.class);
 //        helloFactoryBean.getObject().getName();
 //        System.out.println("helloFactory -> " + applicationContext.getBean("helloFactoryBean"));
 //        System.out.println("&helloFactory -> " + applicationContext.getBean("&helloFactoryBean"));
 //       applicationContext.getBean("&helloFactoryBean");
         try {
-            log.info("bean值:{}",helloFactoryBean.getObject().getName());
+            //log.info("bean值:{}",helloFactoryBean.getObject().getName());
+            System.out.println("我的朋友是呆逼");
+
         }catch (Exception e){
 
         }
-        log.info("我要测试啊:{}",2343);
+        //log.info("我要测试啊:{}",2343);
     }
 }
