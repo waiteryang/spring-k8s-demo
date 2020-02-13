@@ -142,7 +142,7 @@ public class Demo2ServiceTest {
         //接受新提交的任务
         es.shutdown();
         stopWatch1.stop();
-        log.info("测试时间耗时 export time:"+stopWatch1.getTotalTimeSeconds());
+        //log.info("测试时间耗时 export time:"+stopWatch1.getTotalTimeSeconds());
     }
 
 

@@ -27,7 +27,7 @@ public class MyTest {
 //       applicationContext.getBean("&helloFactoryBean");
         try {
             //log.info("bean值:{}",helloFactoryBean.getObject().getName());
-            System.out.println("我的朋友是呆逼");
+            System.out.println("我的朋友是呆逼1111");
 
         }catch (Exception e){
 
