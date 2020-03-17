@@ -28,6 +28,8 @@ public class MyTest {
         try {
             //log.info("bean值:{}",helloFactoryBean.getObject().getName());
             System.out.println("我的朋友是呆逼1111");
+            System.out.println("xxxer");
+            System.out.println("hahahhlai这里啊");
 
         }catch (Exception e){
 
