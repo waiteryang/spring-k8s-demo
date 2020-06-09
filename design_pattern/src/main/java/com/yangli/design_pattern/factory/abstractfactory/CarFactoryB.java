@@ -1,5 +1,7 @@
 package com.yangli.design_pattern.factory.abstractfactory;
 
+import com.yangli.design_pattern.factory.AUDI;
+import com.yangli.design_pattern.factory.Benz;
 import com.yangli.design_pattern.factory.ICar;
 
 /**
@@ -8,18 +10,16 @@ import com.yangli.design_pattern.factory.ICar;
 public class CarFactoryB implements AbstractCarFactory {
 
     @Override
-    public ICar createCar() {
-
-        ICar car = null;
-
-
-        return car;
-        //return null;
+    public void createA() {
+        System.out.println("我是创建产品A");
+        new Benz().dirve();
     }
+
+
 
     @Override
-    public void productDrive() {
-        System.out.println("我是生产B");
+    public void createB() {
+        System.out.println("我是创建产品B");
+        new AUDI().dirve();
     }
-
 }

@@ -3,6 +3,8 @@ package com.yangli.design_pattern.factory.simplefactory;
 
 import com.yangli.design_pattern.factory.ICar;
 
+import java.util.Calendar;
+
 /**
  * 简单工厂
  * 简单工厂又叫静态工厂
@@ -16,10 +18,14 @@ public class SimpleFactoryTest {
 
     public static void main(String[] args) {
 
-
         ICar car = CarSimpleFactory.createCar("AUDI");
         car.dirve();
 
+
+
+
+        //工厂模式在JDK -Calendar应用的源码分析
+        Calendar calendar = Calendar.getInstance();
 
     }
 
