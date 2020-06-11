@@ -7,6 +7,8 @@ import java.lang.reflect.Method;
 
 /**
  * @author yangli
+ * <p>
+ * 代理实现类
  */
 public class WorkInvocationHandler implements InvocationHandler {
 

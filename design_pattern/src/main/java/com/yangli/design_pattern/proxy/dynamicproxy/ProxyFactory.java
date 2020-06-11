@@ -11,14 +11,24 @@ import java.lang.reflect.Proxy;
 public class ProxyFactory {
 
 
-    //维护一个目标对象
+    /**
+     * 维护一个目标对象
+     */
     private Object target;
 
 
+    /**
+     * 构造函数
+     * 通过构造函数赋值
+     */
     public ProxyFactory(Object target) {
         this.target = target;
     }
 
+
+    /**
+     * 获取代理实例
+     */
     public Object getProxyInstance() {
 
         return Proxy.newProxyInstance(
