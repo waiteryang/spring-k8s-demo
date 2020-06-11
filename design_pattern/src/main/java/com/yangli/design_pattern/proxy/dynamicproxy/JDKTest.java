@@ -3,8 +3,6 @@ package com.yangli.design_pattern.proxy.dynamicproxy;
 import com.yangli.design_pattern.proxy.ISubject;
 import com.yangli.design_pattern.proxy.TargetSubject;
 
-import java.lang.reflect.Proxy;
-
 public class JDKTest {
 
 
@@ -13,7 +11,7 @@ public class JDKTest {
         //目标对象
         ISubject subject = new TargetSubject();
 
-        ISubject proxy =  (ISubject) new ProxyFactory(subject).getProxyInstance();
+        ISubject proxy = (ISubject) new ProxyFactory(subject).getProxyInstance();
         proxy.action();
 
     }
