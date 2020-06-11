@@ -13,15 +13,8 @@ public class JDKTest {
         //目标对象
         ISubject subject = new TargetSubject();
 
-        System.out.println("目标对象类:" + subject.getClass());
-//        //给目标对象，创建代理对象
-//        ISubject proxy = (ISubject) new ProxyFactory(subject).getProxyInstance();
+        ISubject proxy =  (ISubject) new ProxyFactory(subject).getProxyInstance();
+        proxy.action();
 
-        ISubject subject1 = (ISubject) Proxy.newProxyInstance(subject.getClass().getClassLoader(),subject.getClass().getInterfaces(),new WorkInvocationHandler());
-
-//        System.out.println("代理对象类:" + proxy.getClass());
-//        proxy.action();
-
-        subject1.action();
     }
 }
