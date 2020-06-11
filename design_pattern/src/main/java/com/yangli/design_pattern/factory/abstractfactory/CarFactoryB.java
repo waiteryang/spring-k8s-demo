@@ -12,6 +12,7 @@ public class CarFactoryB implements AbstractCarFactory {
     @Override
     public void createA() {
         System.out.println("我是创建产品A");
+        //自行实现不同的方法
         new Benz().dirve();
     }
 
@@ -20,6 +21,7 @@ public class CarFactoryB implements AbstractCarFactory {
     @Override
     public void createB() {
         System.out.println("我是创建产品B");
+        //自行实现不同的方法
         new AUDI().dirve();
     }
 }
