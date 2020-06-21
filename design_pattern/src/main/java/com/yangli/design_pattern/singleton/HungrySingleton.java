@@ -3,7 +3,7 @@ package com.yangli.design_pattern.singleton;
 
 /**
  * 单例-饿汉模式
- * 一单加载就创建实例
+ * 一旦加载就创建实例
  * @author yangli
  */
 public class HungrySingleton {

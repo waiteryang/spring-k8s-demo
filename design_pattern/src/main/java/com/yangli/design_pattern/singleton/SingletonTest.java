@@ -5,7 +5,7 @@ package com.yangli.design_pattern.singleton;
  *
  * @author yangli
  * <p>
- * 单例的特定
+ * 单例的特点
  * 1.单例只有一个实例对象
  * 2.该单例对象必须由该类创建
  * 3.单例对外提供一个单例的全局访问点
@@ -27,7 +27,7 @@ public class SingletonTest {
         for (int i = 0; i < 10000L; i++) {
 
             new Thread(()->{
-                System.out.println(LazySingleton.getInstance1().hashCode());
+                System.out.println(LazySingleton.getInstance().hashCode());
             }).start();
         }
 
