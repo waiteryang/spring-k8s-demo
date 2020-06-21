@@ -26,15 +26,14 @@ public class WorkInvocationHandler implements InvocationHandler {
         System.out.println("我是代理后事件处理");
 
 
-        Enhancer enhancer = new Enhancer();
-        //设置父类
+//        Enhancer enhancer = new Enhancer();
+//        //设置父类
         //enhancer.setSuperclass();
         //设置回调函数
         //enhancer.setCallback();
 
         //创建子类(代理对象)
         //enhancer.create();
-
         return object;
     }
 

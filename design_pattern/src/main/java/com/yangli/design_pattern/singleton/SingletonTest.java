@@ -27,7 +27,7 @@ public class SingletonTest {
         for (int i = 0; i < 10000L; i++) {
 
             new Thread(()->{
-                System.out.println(LazySingleton.getInstance().hashCode());
+                System.out.println(LazySingleton.getInstance1().hashCode());
             }).start();
         }
 

@@ -6,8 +6,14 @@ package com.yangli.design_pattern.abstractfactory;
  */
 public interface  AbstractCarFactory {
 
+    /**
+     * 抽象产品
+     */
     void createA();
 
+    /**
+     * 抽象产品B
+     */
     void createB();
 
 }

@@ -1,5 +1,9 @@
 package com.yangli.design_pattern.abstractfactory;
 
+
+/**
+ * 实际的工厂A
+ */
 public class CarAFactory implements AbstractCarFactory {
 
     @Override
