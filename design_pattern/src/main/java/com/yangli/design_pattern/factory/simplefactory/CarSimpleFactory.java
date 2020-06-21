@@ -11,6 +11,12 @@ import com.yangli.design_pattern.factory.ICar;
  */
 public class CarSimpleFactory {
 
+
+    /**
+     * 静态方法传参，根据参数不同返回不同的实例
+     * @param carType
+     * @return 返回不同的实例
+     */
     public static ICar createCar(String carType){
 
         ICar car = null;

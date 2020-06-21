@@ -22,9 +22,7 @@ public class SimpleFactoryTest {
         car.dirve();
 
 
-
-
-        //工厂模式在JDK -Calendar应用的源码分析
+        //查看工厂模式在JDK -Calendar应用的源码分析
         Calendar calendar = Calendar.getInstance();
 
     }
