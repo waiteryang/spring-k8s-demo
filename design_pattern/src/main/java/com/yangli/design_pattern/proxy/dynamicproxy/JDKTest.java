@@ -10,6 +10,8 @@ import com.yangli.design_pattern.proxy.TargetSubject;
  *
  * 优点:可以在不修改目标对象的前提下扩展目标对象的功能
  *
+ * 动态代理是在运行时动态生成的，即编译完成后没有实际的class文件，而是在运行时动态生成类字节码，并加载到JVM
+ *
  */
 public class JDKTest {
 

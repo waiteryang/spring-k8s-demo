@@ -23,7 +23,7 @@ public class LazySingleton {
     }
 
     /**
-     * 减小锁的代码块
+     * 双重加锁
      */
     public static LazySingleton getInstance1() {
 
@@ -38,25 +38,4 @@ public class LazySingleton {
         }
         return instance;
     }
-
-
-    /**
-     *
-     */
-    public static synchronized LazySingleton getInstance() {
-
-            if (instance == null) {
-                return new LazySingleton();
-            }
-        return instance;
-    }
-
-
-
-    //静态方法加上关键字  =》静态方法加上synchronized，那么它获取的就是这个类的锁，锁住就是这个类 类锁
-    //实例方法(也就是普通方法)加上关键字 对象锁
-    //方法中使用同步代码块
-
-
-
 }

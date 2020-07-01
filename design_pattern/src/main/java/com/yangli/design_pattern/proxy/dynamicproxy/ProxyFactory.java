@@ -39,6 +39,7 @@ public class ProxyFactory {
                     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                         //1.0执行方法前操作
                         System.out.println("我是行动前");
+                        //执行被代理类中的方法
                         Object res = method.invoke(target, args);
                         //2.0执行方法后操作
                         System.out.println("我是行动后");

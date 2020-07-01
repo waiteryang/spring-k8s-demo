@@ -7,8 +7,9 @@ import com.yangli.design_pattern.proxy.ISubject;
  *
  * @author yangli
  */
-public class TargetSubject implements ISubject {
+public  class  TargetSubject implements ISubject {
 
+    public final static String SERVICE_VERSION = "/v1";
 
     @Override
     public void action() {

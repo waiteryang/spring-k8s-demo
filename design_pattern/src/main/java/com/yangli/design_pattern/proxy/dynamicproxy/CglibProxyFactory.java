@@ -7,6 +7,11 @@ import org.springframework.cglib.proxy.MethodProxy;
 import java.lang.reflect.Method;
 
 /**
+ * CGlib 实现MethodInterceptor 拦截器 =》实现CGLIB代理模式
+ *
+ * 需要引入cglib的jar文件，但是spring的核心包中已经包含了cglib功能
+ * 引入功能包后，就可以在内存中动态构建子类
+ *
  * @author yangli
  */
 public class CglibProxyFactory implements MethodInterceptor {
