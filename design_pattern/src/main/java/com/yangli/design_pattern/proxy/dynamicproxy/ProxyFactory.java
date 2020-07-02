@@ -32,7 +32,9 @@ public class ProxyFactory {
     public Object getProxyInstance() {
 
         return Proxy.newProxyInstance(
+                //一个classloader对象，定义了由哪个classloader对象对生成的代理类进行加载
                 target.getClass().getClassLoader(),
+                //一个interface对象数组，表示我们将要给我们的代理对象提供一组什么样的接口，如果我们提供了这样一个接口对象数组，那么也就是声明了代理类实现了这些接口，代理类就可以调用接口中声明的所有方法。
                 target.getClass().getInterfaces(),
                 new InvocationHandler() {
                     @Override

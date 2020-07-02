@@ -23,9 +23,9 @@ public class LazySingleton {
     }
 
     /**
-     * 双重加锁
+     * 双重加锁（保证线程安全）
      */
-    public static LazySingleton getInstance1() {
+    public static LazySingleton getInstance() {
 
         if (instance == null) {
             //加锁
