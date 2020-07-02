@@ -13,7 +13,7 @@ public class LazySingleton {
      * 保证instance 在所有线程中都同步
      * 和饿汉模式相比，这边不需要先实例化出来，注意这里的volatile，它是必须的
      */
-    private static volatile LazySingleton instance = null;
+    private static volatile LazySingleton instance;
 
     /**
      * 避免外部被实例化
@@ -28,6 +28,7 @@ public class LazySingleton {
     public static LazySingleton getInstance() {
 
         if (instance == null) {
+
             //加锁
             synchronized (LazySingleton.class) {
                 //这次判断也是必须的，不然会有并发问题
@@ -38,4 +39,25 @@ public class LazySingleton {
         }
         return instance;
     }
+
+
+    /**
+     * 不双重加锁，线程不安全
+     */
+    public static LazySingleton getInstance1() throws InterruptedException {
+
+        if (instance == null) {
+            Thread.sleep(50);
+            //加锁
+            synchronized (LazySingleton.class) {
+                //这次判断也是必须的，不然会有并发问题
+                //if (instance == null) {
+                    instance = new LazySingleton();
+                //}
+            }
+        }
+        return instance;
+    }
+
+
 }

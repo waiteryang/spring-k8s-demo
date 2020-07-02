@@ -27,9 +27,19 @@ public class SingletonTest {
         for (int i = 0; i < 10000L; i++) {
 
             new Thread(()->{
-                System.out.println(LazySingleton.getInstance().hashCode());
+                try {
+                    System.out.println(LazySingleton.getInstance1().hashCode());
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }).start();
         }
+
+
+
+        // 我们JDK中，java.lang.Runtime就是经典的单例模式(饿汉式)
+        Runtime.getRuntime();
+
 
     }
 
