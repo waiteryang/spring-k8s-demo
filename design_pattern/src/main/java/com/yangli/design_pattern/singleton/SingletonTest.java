@@ -24,7 +24,7 @@ public class SingletonTest {
     public static void main(String[] args) {
 
 
-        for (int i = 0; i < 10000L; i++) {
+        for (int i = 0; i < 100000L; i++) {
 
             new Thread(()->{
                 try {
@@ -35,12 +35,8 @@ public class SingletonTest {
             }).start();
         }
 
-
-
         // 我们JDK中，java.lang.Runtime就是经典的单例模式(饿汉式)
         Runtime.getRuntime();
-
-
     }
 
 

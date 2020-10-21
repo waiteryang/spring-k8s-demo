@@ -13,10 +13,6 @@ import java.util.Calendar;
  *
  *
  *
- *
- *
- *
- *
  * @author yangli
  */
 public class SimpleFactoryTest {
@@ -24,12 +20,12 @@ public class SimpleFactoryTest {
 
     public static void main(String[] args) {
 
+        //根据客户需要的条件动态实例化相关类,不需关心创建细节，只需要知道类型所对应的参数
         ICar car = CarSimpleFactory.createCar("AUDI");
         car.dirve();
 
-
         //查看工厂模式在JDK -Calendar应用的源码分析
-        //抽象类java.util.Calendar的getInstance方法将根据不同的情况返回不同的Calendar子类的对象
+        //抽象类java.util.Calendar 日历的getInstance方法将根据不同的情况返回不同的Calendar子类的对象
         Calendar calendar = Calendar.getInstance();
 
     }

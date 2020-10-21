@@ -19,7 +19,7 @@ public class LazySingleton {
      * 避免外部被实例化
      */
     public LazySingleton() {
-
+        System.out.println("我是单例模式呀");
     }
 
     /**
@@ -48,12 +48,13 @@ public class LazySingleton {
 
         if (instance == null) {
             Thread.sleep(50);
+            //多个线程同一时间到达
             //加锁
             synchronized (LazySingleton.class) {
                 //这次判断也是必须的，不然会有并发问题
-                //if (instance == null) {
+                if (instance == null) {
                     instance = new LazySingleton();
-                //}
+                }
             }
         }
         return instance;

@@ -2,9 +2,10 @@ package com.yangli.design_pattern.factory.abstractfactory;
 
 import com.yangli.design_pattern.factory.AUDI;
 import com.yangli.design_pattern.factory.Benz;
-import com.yangli.design_pattern.factory.ICar;
 
 /**
+ * 可以新增新的产品线，但无法新增产品
+ *
  * @author yangli
  */
 public class CarFactoryB implements AbstractCarFactory {
@@ -15,7 +16,6 @@ public class CarFactoryB implements AbstractCarFactory {
         //自行实现不同的方法
         new Benz().dirve();
     }
-
 
 
     @Override

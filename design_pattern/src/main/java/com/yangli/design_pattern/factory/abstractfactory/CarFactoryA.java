@@ -1,5 +1,6 @@
 package com.yangli.design_pattern.factory.abstractfactory;
 
+import com.yangli.design_pattern.abstractfactory.AuDi;
 import com.yangli.design_pattern.factory.AUDI;
 import com.yangli.design_pattern.factory.BMW;
 import com.yangli.design_pattern.factory.Benz;
@@ -18,6 +19,10 @@ public class CarFactoryA implements AbstractCarFactory {
 
         //自行实现不同的方法
         new BMW().dirve();
+
+        new AuDi().dirve();
+
+
     }
 
     @Override

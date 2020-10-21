@@ -18,11 +18,12 @@ public class StaticProxyTest {
 
     public static void main(String[] args) {
 
-        ISubject subject = new TargetSubject();
+//        ISubject subject = new TargetSubject();
+//        ProxySubject proxySubject = new ProxySubject(subject);
+//        proxySubject.action();
 
-        ProxySubject proxySubject = new ProxySubject(subject);
-        proxySubject.action();
-
+        Integer n = null;
+        System.out.println(0 == n);
     }
 
 

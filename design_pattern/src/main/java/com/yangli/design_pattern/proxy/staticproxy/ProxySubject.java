@@ -22,6 +22,7 @@ public class ProxySubject implements ISubject {
     public void action() {
         System.out.println("我是代理action方法中的前缀");
         target.action();
+        System.out.println("我是后缀");
     }
 
     @Override

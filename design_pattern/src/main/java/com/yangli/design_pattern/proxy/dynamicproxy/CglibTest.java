@@ -7,10 +7,8 @@ public class CglibTest {
 
 
     public static void main(String[] args) {
-
         ISubject subject = new TargetSubject();
         ISubject proxy = (ISubject) new CglibProxyFactory(subject).getProxyInstance();
         proxy.action();
-
     }
 }
