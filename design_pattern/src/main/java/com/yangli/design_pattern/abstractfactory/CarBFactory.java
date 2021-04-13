@@ -1,6 +1,6 @@
 package com.yangli.design_pattern.abstractfactory;
 
-public class CarBFactory  implements  AbstractCarFactory{
+public class CarBFactory implements AbstractCarFactory {
     @Override
     public void createA() {
 
@@ -13,5 +13,10 @@ public class CarBFactory  implements  AbstractCarFactory{
     public void createB() {
         System.out.println("汽车创建B");
         new Benz().dirve();
+    }
+
+    @Override
+    public String handleList(String x) {
+        return "xx";
     }
 }
