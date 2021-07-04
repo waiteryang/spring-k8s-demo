@@ -2,9 +2,13 @@ package com.yangli.design_pattern.test;
 
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
 
-@Data
+@Getter
+@Setter
 public class Staff {
 
 //    public Staff(String name, Integer age, String extra) {
